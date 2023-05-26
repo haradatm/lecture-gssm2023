@@ -16,7 +16,6 @@ dependencies:
   - pandas
   # - pytorch
   # - tensorflow
-  - japanize-matplotlib
   - jinja2
   - pre-commit
   - pip
