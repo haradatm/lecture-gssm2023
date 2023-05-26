@@ -1,9 +1,11 @@
-name: ds
+name: gssm2023
 
 channels:
+  - defaults
   - conda-forge
 
 dependencies:
+  - python=3.11.3
   - ipython
   - ipykernel
   - python
@@ -12,8 +14,9 @@ dependencies:
   - altair
   - scikit-learn
   - pandas
-  - pytorch
-  - tensorflow
+  # - pytorch
+  # - tensorflow
+  - japanize-matplotlib
   - jinja2
   - pre-commit
   - pip
