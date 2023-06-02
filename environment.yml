@@ -16,6 +16,7 @@ dependencies:
   - pandas
   # - pytorch
   # - tensorflow
+  - gdown
   - jinja2
   - pre-commit
   - pip
