@@ -30,5 +30,5 @@ cd ${TOOLS}/src/mecab/mecab/python
 sed -i".org" -e "s/return string.split (cmd1(str))/return cmd1(str).split()/g" setup.py
 python setup.py build
 pip install -e .
-# cd ${HOME}/.conda/envs/gssm2023/lib
-# ln -s ${INSTALL_ROOT}/lib/libmecab.so.2.0.0 ./libmecab.so.2
+cd ${HOME}/.conda/envs/gssm2023/lib
+ln -s ${INSTALL_ROOT}/lib/libmecab.so.2.0.0 ./libmecab.so.2
