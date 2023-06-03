@@ -1,5 +1,6 @@
 #!/bin/sh
 
+mkdir -p ../tools
 cd ../tools
 TOOLS=`pwd`
 
