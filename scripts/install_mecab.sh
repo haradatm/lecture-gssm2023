@@ -32,3 +32,5 @@ python setup.py build
 pip install -e .
 cd ${HOME}/.conda/envs/gssm2023/lib
 ln -s ${INSTALL_ROOT}/lib/libmecab.so.2.0.0 ./libmecab.so.2
+
+echo "SUCCESS !!"
