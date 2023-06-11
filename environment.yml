@@ -17,6 +17,8 @@ dependencies:
   # - pytorch
   # - tensorflow
   - gdown
+  - seaborn
+  - openpyxl
   - jinja2
   - pre-commit
   - pip
