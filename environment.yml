@@ -19,9 +19,6 @@ dependencies:
   - gdown
   - seaborn
   - openpyxl
-  - wordcloud
-  - networkx
-  - pyvis
   - jinja2
   - pre-commit
   - pip

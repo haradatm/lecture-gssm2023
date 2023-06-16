@@ -1,3 +1,6 @@
 pytest
 pytest-cov
 japanize-matplotlib
+wordcloud
+networkx
+pyvis
