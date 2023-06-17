@@ -19,6 +19,7 @@ dependencies:
   - gdown
   - seaborn
   - openpyxl
+  - pygraphviz
   - jinja2
   - pre-commit
   - pip
