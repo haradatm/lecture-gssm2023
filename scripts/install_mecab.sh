@@ -26,6 +26,10 @@ cd ${TOOLS}/src/mecab/mecab-ipadic
 make
 make install
 
+echo '"湯畑",-1,-1,1,名詞,一般,*,*,*,*,湯畑,ユバタケ,ユバタケ,USER"' > ${INSTALL_ROOT}/lib/mecab/dic/ipadic/user_dic.csv
+echo "userdic = ${INSTALL_ROOT}/lib/mecab/dic/ipadic/user.dic" >> ${INSTALL_ROOT}/etc/mecabrc
+${INSTALL_ROOT}/libexec/mecab/mecab-dict-index -d ${INSTALL_ROOT}/lib/mecab/dic/ipadic -u ${INSTALL_ROOT}/lib/mecab/dic/ipadic/user.dic -f utf-8 -t utf-8 ${INSTALL_ROOT}/lib/mecab/dic/ipadic/user_dic.csv
+
 cd ${TOOLS}/src/mecab/mecab/python
 sed -i".org" -e "s/return string.split (cmd1(str))/return cmd1(str).split()/g" setup.py
 python setup.py build
