@@ -17891,23 +17891,21 @@ class="
 
 <span class="c1"># Singular value decomposition</span>
 <span class="n">U</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">residuals</span><span class="p">,</span> <span class="n">full_matrices</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">nb_axes</span><span class="p">]</span>
+<span class="n">sv</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">nb_axes</span><span class="p">]</span>
 <span class="n">u</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:</span><span class="n">nb_axes</span><span class="p">]</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span><span class="p">[:,</span> <span class="p">:</span><span class="n">nb_axes</span><span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">V</span><span class="p">[:</span><span class="n">nb_axes</span><span class="p">,</span> <span class="p">:]</span>
 
 <span class="c1"># row mass</span>
 <span class="n">row_mass</span> <span class="o">=</span> <span class="n">row_sum</span> <span class="o">/</span> <span class="n">n</span>
 
-<span class="c1"># row coord = sv * u /sqrt(row.mass)</span>
-<span class="n">cc</span> <span class="o">=</span> <span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
-<span class="n">row_coord</span> <span class="o">=</span> <span class="n">cc</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">row_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="c1"># row coord = u * sv /sqrt(row.mass)</span>
+<span class="n">row_coord</span> <span class="o">=</span> <span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="n">sv</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">row_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 
 <span class="c1"># col mass</span>
 <span class="n">col_mass</span> <span class="o">=</span> <span class="n">col_sum</span> <span class="o">/</span> <span class="n">n</span>
 
-<span class="c1"># row coord = sv * v /sqrt(col.mass)</span>
-<span class="n">cc</span> <span class="o">=</span> <span class="p">(</span><span class="n">v</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
-<span class="n">col_coord</span> <span class="o">=</span> <span class="n">cc</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">col_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="c1"># row coord = sv * vT /sqrt(col.mass)</span>
+<span class="n">col_coord</span> <span class="o">=</span> <span class="p">(</span><span class="n">sv</span> <span class="o">*</span> <span class="n">v</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">col_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 
 <span class="c1"># eige nvalue</span>
 <span class="n">eige_nvalue</span> <span class="o">=</span> <span class="n">s</span> <span class="o">**</span> <span class="mi">2</span>
@@ -17977,23 +17975,21 @@ class="
 
 <span class="c1"># Singular value decomposition</span>
 <span class="n">U</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">table_P</span><span class="p">,</span> <span class="n">full_matrices</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">nb_axes</span><span class="p">]</span>
+<span class="n">sv</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">nb_axes</span><span class="p">]</span>
 <span class="n">u</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:</span><span class="n">nb_axes</span><span class="p">]</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span><span class="p">[:,</span> <span class="p">:</span><span class="n">nb_axes</span><span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">V</span><span class="p">[:</span><span class="n">nb_axes</span><span class="p">,</span> <span class="p">:]</span>
 
 <span class="c1"># row mass</span>
 <span class="n">row_mass</span> <span class="o">=</span> <span class="n">row_sum</span> <span class="o">/</span> <span class="n">n</span>
 
-<span class="c1"># row coord = sv * u /sqrt(row.mass)</span>
-<span class="n">cc</span> <span class="o">=</span> <span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
-<span class="n">row_coord</span> <span class="o">=</span> <span class="n">cc</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">row_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="c1"># row coord = u * sv /sqrt(row.mass)</span>
+<span class="n">row_coord</span> <span class="o">=</span> <span class="p">(</span><span class="n">u</span> <span class="o">*</span> <span class="n">sv</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">row_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 
 <span class="c1"># col mass</span>
 <span class="n">col_mass</span> <span class="o">=</span> <span class="n">col_sum</span> <span class="o">/</span> <span class="n">n</span>
 
-<span class="c1"># row coord = sv * v /sqrt(col.mass)</span>
-<span class="n">cc</span> <span class="o">=</span> <span class="p">(</span><span class="n">v</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
-<span class="n">col_coord</span> <span class="o">=</span> <span class="n">cc</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">col_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="c1"># row coord = sv * vT /sqrt(col.mass)</span>
+<span class="n">col_coord</span> <span class="o">=</span> <span class="p">(</span><span class="n">sv</span> <span class="o">*</span> <span class="n">v</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">col_mass</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 
 <span class="c1"># eige nvalue</span>
 <span class="n">eige_nvalue</span> <span class="o">=</span> <span class="n">s</span> <span class="o">**</span> <span class="mi">2</span>
