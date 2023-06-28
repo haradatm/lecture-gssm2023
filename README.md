@@ -1,20 +1,10 @@
 # lecture-gssm2023
 
-[![Source Code Check](https://github.com/icoxfog417/datascience-template/actions/workflows/ci.yml/badge.svg)](https://github.com/icoxfog417/datascience-template/actions/workflows/ci.yml)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Code style: flake8](https://img.shields.io/badge/code%20style-flake8-black)](https://github.com/PyCQA/flake8)
-[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
-[![Typing: mypy](https://img.shields.io/badge/typing-mypy-blue)](https://github.com/python/mypy)
-
-Well structured and tested data science project template. You can use this [template](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) when creating the data sicence repository.
-
+This repository will be used for courses 01KA438 and 0ADM126 offered in 2023.
 
 📁 **Organized**: The project structure is refereed to [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science)
 
-🚀 **Prepared**: Major libraries are prepared in `environment.yml`. If you are familiar with [Colaboratory](https://colab.research.google.com/?utm_source=scs-index) environment, please use `environment-colab.yml` .
-
-✅ **Tested**: `scripts` are checked by common linter when [pre-commit](https://pre-commit.com/).
+🚀 **Prepared**: Major libraries are prepared in `environment.yml`.
 
 Here is the notebook link to provide the quick access to your analysis. You can create the conda environment by Right click `Build Conda Environment` or `conda create -f environment.yml` in Studio Lab.
 
@@ -24,26 +14,36 @@ Here is the notebook link to provide the quick access to your analysis. You can 
 
 ```bash
 .
-├── data
-│   ├── external                    # data from third party sources.
-│   ├── processed                   # data after processing
-│   ├── interim                     # data that transformed
-│   └── raw                         # raw data
-├── models                          # store models
+├── README.md                       # describe this project
 ├── notebooks                       # store notebooks
-├── docs                            # documentation for your project
-├── .gitignore                      # ignore files that cannot commit to Git
-├── .pre-commit-config.yaml         # configurations for pre-commit
-├── pyproject.toml                  # dependencies for poetry
-├── README.md                       # describe your project
+│   ├── day-2-1.ipynb
+│   ├── day-2-2.ipynb
+│   ├── day-3.ipynb
+│   ├── day-4.ipynb
+│   ├── day-5.ipynb
+│   ├── images
+│   └── miscs
+│       └── covid-19.ipynb
+├── notebooks-samples               # stores notebook execution results in HTML
+│   ├── day-2-1.html
+│   ├── day-2-2.html
+│   ├── day-3.html
+│   ├── day-4.html
+│   ├── day-5.html
+│   ├── images
+│   └── miscs
+│       └── covid-19.html
 ├── scripts                         # store source code used in notebook
-│   └── __init__.py                 # make src a Python module
-└── tests                           # store tests
-    └── __init__.py                 # make tests a Python module
+│   ├── install_cabocha.sh
+│   └── install_mecab.sh
+├── slides                          # documentation for this lecture materials
+│   └── practice-1.pdf
+│   └── practice-2.pdf
+│   └── practice-3.pdf
+│   └── practice-4.pdf
+│   └── practice-5.pdf
+└── miscs                           # store miscellaneous resources
+    ├── coding-rule.txt.zip
+    ├── practice-3_sample.xlsx
+    └── z1_edit_words3.textClipping
 ```
-
-## Customization
-
-* `environment.yml`: Please specify the packages and versions. As a default, no version is specified.
-* `.pre-commit-config.yaml`: Please check the `rev` to check the code.
-* Change the Notebook url for `Open in Studio Lab`.
