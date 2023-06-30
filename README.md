@@ -36,7 +36,7 @@ Here is the notebook link to provide the quick access to your analysis. You can 
 ├── scripts                         # store source code used in notebook
 │   ├── install_cabocha.sh
 │   └── install_mecab.sh
-├── slides                          # documentation for this lecture materials
+├── slides                          # documentation for this lecture materials (To be uploaded after the lecture.)
 │   └── practice-1.pdf
 │   └── practice-2.pdf
 │   └── practice-3.pdf
@@ -45,5 +45,6 @@ Here is the notebook link to provide the quick access to your analysis. You can 
 └── miscs                           # store miscellaneous resources
     ├── coding-rule.txt.zip
     ├── practice-3_sample.xlsx
+    ├── practice-4_sample.xlsx
     └── z1_edit_words3.textClipping
 ```
