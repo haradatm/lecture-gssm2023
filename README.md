@@ -20,7 +20,7 @@ Here is the notebook link to provide the quick access to your analysis. You can 
 │   ├── day-2-2.ipynb
 │   ├── day-3.ipynb
 │   ├── day-4.ipynb
-│   ├── day-5.ipynb
+│   ├── day-5.ipynb                 # comming soon ...
 │   ├── images
 │   └── miscs
 │       └── covid-19.ipynb
@@ -29,7 +29,7 @@ Here is the notebook link to provide the quick access to your analysis. You can 
 │   ├── day-2-2.html
 │   ├── day-3.html
 │   ├── day-4.html
-│   ├── day-5.html
+│   ├── day-5.html                  # comming soon ...
 │   ├── images
 │   └── miscs
 │       └── covid-19.html
