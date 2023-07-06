@@ -12,6 +12,11 @@ export PATH=$PATH:${TOOLS}/usr/local/bin
 export CPATH=$CPATH:${TOOLS}/usr/local/include
 export LIBRARY_PATH=$LIBRARY_PATH:${TOOLS}/usr/local/lib
 
+if [ -d "${INSTALL_ROOT}/lib/cabocha" ]; then
+  echo "Note: cabocha is already installed."
+  exit 1
+fi
+
 ### Install CRF++-
 
 cd ${TOOLS}/src

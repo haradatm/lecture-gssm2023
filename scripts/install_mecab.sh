@@ -12,6 +12,11 @@ export PATH=$PATH:${TOOLS}/usr/local/bin
 export CPATH=$CPATH:${TOOLS}/usr/local/include
 export LIBRARY_PATH=$LIBRARY_PATH:${TOOLS}/usr/local/lib
 
+if [ -d "${INSTALL_ROOT}/lib/mecab" ]; then
+  echo "Note: mecab is already installed."
+  exit 1
+fi
+
 ### Install MeCab
 
 cd ${TOOLS}/src
