@@ -2,7 +2,7 @@
 
 This repository will be used for courses 01KA438 and 0ADM126 offered in 2023.
 
-📁 **Organized**: The project structure is refereed to [datascience-template](https://github.com/icoxfog417/datascience-template)
+📁 **Organized**: The project structure is refereed to [datascience-template](https://github.com/icoxfog417/datascience-template).
 
 🚀 **Prepared**: Major libraries are prepared in `environment.yml`.
 
