@@ -6,7 +6,7 @@ This repository will be used for courses 01KA438 and 0ADM126 offered in 2023.
 
 🚀 **Prepared**: Major libraries are prepared in `environment.yml`.
 
-Here is the notebook link to provide the quick access to your analysis. You can create the conda environment by Right click `Build Conda Environment` or `conda create -f environment.yml` in Studio Lab.
+Here is the notebook link to provide the quick access to your analysis. You can create the conda environment by Right click `Build Conda Environment` or `conda env create -f environment.yml` in Studio Lab.
 
 [![Open in SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/icoxfog417/datascience-template/blob/main/notebooks/example.ipynb)
 
